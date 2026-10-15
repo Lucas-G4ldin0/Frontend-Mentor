@@ -22,6 +22,15 @@
   --font-weight-regular: 400;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
+
+  --spacing-1600: 8rem;
+  --spacing-600: 3rem;
+  --spacing-500: 2.5rem;
+  --spacing-400: 2rem;
+  --spacing-300: 1.5rem;
+  --spacing-200: 1rem;
+  --spacing-150: 0.75rem;
+  --spacing-100: 0.5rem;
 }
 
 * {
@@ -38,11 +47,12 @@ body {
 
   background-color: var(--color-stone-100);
   color: var(--color-stone-600);
+  padding-block: var(--spacing-1600);
 }
 
 ol,
 ul {
-  padding-inline-start: 2.5rem;
+  padding-inline-start: var(--spacing-300);
 }
 
 h1,
@@ -58,13 +68,7 @@ h1 {
   font-size: var(--text-size-preset-1);
   font-weight: var(--font-weight-regular);
   color: var(--color-stone-900);
-}
-
-#preparation-time > h2 {
-  font-family: var(--font-family-outfit);
-  font-size: var(--text-size-preset-3);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-rose-800);
+  margin-block-end: var(--spacing-300);
 }
 
 main {
@@ -72,11 +76,125 @@ main {
   max-width: 736px;
   margin-inline: auto;
   background-color: var(--color-white);
+  padding: var(--spacing-500);
+  border-radius: 24px;
 }
 
 header > img {
   width: 100%;
   height: auto;
   display: block;
-  padding: 40px;
+  border-radius: 12px;
+  margin-block-end: var(--spacing-500);
+}
+
+header > p {
+  margin-block-end: var(--spacing-400);
+}
+
+#preparation-time {
+  background-color: var(--color-rose-50);
+  border-radius: 12px;
+  padding: var(--spacing-300);
+  margin-block-end: var(--spacing-400);
+
+  & > h2 {
+    margin-block-end: var(--spacing-200);
+    font-family: var(--font-family-outfit);
+    font-size: var(--text-size-preset-3);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-rose-800);
+  }
+
+  & li + li {
+    margin-block-start: var(--spacing-100);
+  }
+
+  & > ul {
+    padding-inline-start: var(--spacing-300);
+  }
+
+  & li {
+    padding-inline-start: var(--spacing-200);
+  }
+
+  & li::marker {
+    color: var(--color-rose-800);
+  }
+}
+
+#ingredients {
+  & > h2 {
+    margin-block-end: var(--spacing-300);
+  }
+
+  & li + li {
+    margin-block-start: var(--spacing-100);
+  }
+
+  & li {
+    padding-inline-start: var(--spacing-200);
+  }
+
+  & li::marker {
+    color: var(--color-brown-800);
+  }
+}
+
+hr {
+  border: 0;
+  border-block-start: 1px solid var(--color-stone-150);
+  margin-block: var(--spacing-400);
+}
+
+#instructions {
+  & > h2 {
+    margin-block-end: var(--spacing-300);
+  }
+
+  & li + li {
+    margin-block-start: var(--spacing-100);
+  }
+
+  & li::marker {
+    color: var(--color-brown-800);
+    font-family: var(--font-family-outfit);
+    font-weight: var(--font-weight-bold);
+  }
+
+  & li {
+    padding-inline-start: var(--spacing-200);
+  }
+}
+
+#nutrition {
+  & > p {
+    margin-block: var(--spacing-300);
+  }
+
+  & > table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  & td {
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-brown-800);
+    padding-inline-start: var(--spacing-100);
+  }
+
+  & th {
+    text-align: left;
+    font-weight: var(--font-weight-regular);
+    padding-inline-start: var(--spacing-400);
+  }
+
+  & th,
+  td {
+    padding-block: var(--spacing-150);
+  }
+
+  & tr:not(:last-child) {
+    border-block-end: 1px solid var(--color-stone-150);
+  }
 }
