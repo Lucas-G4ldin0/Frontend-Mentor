@@ -12,6 +12,10 @@ O layout possui três comportamentos principais:
 - tablet com redução do espaço disponível ao cartão;
 - mobile com imagem ocupando toda a largura e conteúdo com recuo próprio.
 
+## Links
+
+- [Versão online](https://lucas-g4ldin0.github.io/Frontend-Mentor/Newbie/recipe-page/)
+
 ## Preview
 
 ![Preview da página de receita](./assets/images/preview.jpg)
@@ -55,12 +59,6 @@ Clone o repositório e abra o arquivo `index.html` no navegador. Também é poss
 git clone https://github.com/Lucas-G4ldin0/Frontend-Mentor.git
 cd Frontend-Mentor/Newbie/recipe-page
 ```
-
-## Melhorias futuras
-
-- Restringir o carregamento do Outfit aos pesos utilizados no projeto.
-- Informar as dimensões intrínsecas da imagem para reduzir layout shift.
-- Publicar o projeto e incluir a URL da versão online.
 
 ## Autor
 
