@@ -24,7 +24,6 @@
   --font-weight-bold: 700;
 
   --spacing-1600: 8rem;
-  --spacing-600: 3rem;
   --spacing-500: 2.5rem;
   --spacing-400: 2rem;
   --spacing-300: 1.5rem;
@@ -66,7 +65,6 @@ h2 {
 
 h1 {
   font-size: var(--text-size-preset-1);
-  font-weight: var(--font-weight-regular);
   color: var(--color-stone-900);
   margin-block-end: var(--spacing-300);
 }
@@ -92,6 +90,35 @@ header > p {
   margin-block-end: var(--spacing-400);
 }
 
+hr {
+  border: 0;
+  border-block-start: 1px solid var(--color-stone-150);
+  margin-block: var(--spacing-400);
+}
+
+#preparation-time,
+#ingredients,
+#instructions {
+  & li + li {
+    margin-block-start: var(--spacing-100);
+  }
+
+  & li {
+    padding-inline-start: var(--spacing-200);
+  }
+}
+
+#ingredients,
+#instructions {
+  & > h2 {
+    margin-block-end: var(--spacing-300);
+  }
+
+  & li::marker {
+    color: var(--color-brown-800);
+  }
+}
+
 #preparation-time {
   background-color: var(--color-rose-50);
   border-radius: 12px;
@@ -106,64 +133,14 @@ header > p {
     color: var(--color-rose-800);
   }
 
-  & li + li {
-    margin-block-start: var(--spacing-100);
-  }
-
-  & > ul {
-    padding-inline-start: var(--spacing-300);
-  }
-
-  & li {
-    padding-inline-start: var(--spacing-200);
-  }
-
   & li::marker {
     color: var(--color-rose-800);
   }
 }
 
-#ingredients {
-  & > h2 {
-    margin-block-end: var(--spacing-300);
-  }
-
-  & li + li {
-    margin-block-start: var(--spacing-100);
-  }
-
-  & li {
-    padding-inline-start: var(--spacing-200);
-  }
-
-  & li::marker {
-    color: var(--color-brown-800);
-  }
-}
-
-hr {
-  border: 0;
-  border-block-start: 1px solid var(--color-stone-150);
-  margin-block: var(--spacing-400);
-}
-
 #instructions {
-  & > h2 {
-    margin-block-end: var(--spacing-300);
-  }
-
-  & li + li {
-    margin-block-start: var(--spacing-100);
-  }
-
   & li::marker {
-    color: var(--color-brown-800);
-    font-family: var(--font-family-outfit);
     font-weight: var(--font-weight-bold);
-  }
-
-  & li {
-    padding-inline-start: var(--spacing-200);
   }
 }
 
@@ -190,7 +167,7 @@ hr {
   }
 
   & th,
-  td {
+  & td {
     padding-block: var(--spacing-150);
   }
 
