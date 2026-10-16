@@ -178,9 +178,9 @@ hr {
   }
 
   & td {
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-bold);
     color: var(--color-brown-800);
-    padding-inline-start: var(--spacing-100);
+    padding-inline-start: var(--spacing-200);
   }
 
   & th {
